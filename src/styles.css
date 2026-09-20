@@ -86,6 +86,10 @@
     cursor: pointer;
   }
 
+  a {
+    cursor: pointer;
+  }
+
   img {
     outline: 1px solid color-mix(in oklab, var(--color-fg) 10%, transparent);
     outline-offset: -1px;
@@ -94,6 +98,13 @@
   ::selection {
     background: color-mix(in oklab, var(--color-primary) 22%, transparent);
     color: var(--color-fg);
+  }
+}
+
+/* Readable line length on wide desktop viewports without shrinking the shell */
+@media (min-width: 768px) {
+  .pc-prose {
+    max-width: 42rem;
   }
 }
 
