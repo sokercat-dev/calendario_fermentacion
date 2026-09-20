@@ -115,19 +115,19 @@ function Nuevo() {
   }
 
   return (
-    <main className="px-5 pt-6 pb-4">
+    <main className="px-5 pt-6 pb-4 md:mx-auto md:max-w-3xl md:px-8 md:pt-8">
       <button
         type="button"
         onClick={() => window.history.back()}
-        className="mb-4 inline-flex min-h-11 items-center gap-2 text-sm text-muted"
+        className="mb-4 inline-flex min-h-11 items-center gap-2 text-sm text-muted transition-colors hover:text-fg"
       >
         <ArrowLeft className="size-4" />
         Volver
       </button>
-      <h1 className="font-display text-3xl">
+      <h1 className="font-display text-3xl md:text-4xl">
         {existing ? "Nuevo recambio" : "Registrar recambio"}
       </h1>
-      <p className="mt-2 text-sm text-muted">
+      <p className="mt-2 text-sm text-muted md:text-base">
         Foto, tipo de cultivo y fechas. El texto se escribe solo.
       </p>
 
@@ -157,7 +157,7 @@ function Nuevo() {
 
             <CameraField value={photo} onChange={setPhoto} />
 
-            <section className="grid gap-4">
+            <section className="grid gap-4 md:grid-cols-2">
               <div className="space-y-2">
                 <Label htmlFor="changed">Día del recambio</Label>
                 <Input
@@ -202,7 +202,7 @@ function Nuevo() {
               />
             </section>
 
-            <Button type="submit" size="lg" className="w-full">
+            <Button type="submit" size="lg" className="w-full md:w-auto md:min-w-56">
               Guardar recambio
             </Button>
           </>
