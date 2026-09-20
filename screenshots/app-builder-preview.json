@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Cultivo",
+      "hasCanvas": false,
+      "bodyTextLen": 268,
+      "bodyTextHash": "bbc400ca9dcc06b2b90ceb5718d638d58850a6410ab1d6f1a47f8da3df38e952",
+      "bodyTextPrefix": "Diario de fermentos Cultivo Una foto al recambio. El diario apun",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Cultivo",
+      "hasCanvas": false,
+      "bodyTextLen": 268,
+      "bodyTextHash": "bbc400ca9dcc06b2b90ceb5718d638d58850a6410ab1d6f1a47f8da3df38e952",
+      "bodyTextPrefix": "Diario de fermentos Cultivo Una foto al recambio. El diario apun",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

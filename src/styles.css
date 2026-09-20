@@ -1,0 +1,109 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-bg: #f4f0e8;
+  --color-surface: #fbf8f2;
+  --color-sunken: #ebe4d6;
+  --color-fg: #1c1916;
+  --color-muted: #6b645c;
+  --color-subtle: #8a8278;
+  --color-primary: #3d5a4c;
+  --color-primary-fg: #f4f0e8;
+  --color-clay: #8c5340;
+  --color-clay-fg: #fbf8f2;
+  --color-border: #d8d0c2;
+  --color-ring: #3d5a4c;
+  --color-kefir-agua: #cbb892;
+  --color-kefir-leche: #efe4cf;
+  --color-yogurt: #f3ece1;
+  --color-chucrut: #b7be9a;
+  --color-background: #f4f0e8;
+  --color-foreground: #1c1916;
+  --color-card: #fbf8f2;
+  --color-card-foreground: #1c1916;
+  --color-muted-foreground: #6b645c;
+  --color-accent: #3d5a4c;
+  --color-accent-foreground: #f4f0e8;
+  --color-destructive: #8c5340;
+  --color-input: #d8d0c2;
+  --color-primary-foreground: #f4f0e8;
+  --color-secondary: #ebe4d6;
+  --color-secondary-foreground: #1c1916;
+
+  --font-display: "Fraunces", "Iowan Old Style", Palatino, Georgia, serif;
+  --font-sans: "Outfit", "Segoe UI", system-ui, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 28px;
+  --radius-2xl: 32px;
+
+  --shadow-card:
+    0 0 0 1px color-mix(in oklab, var(--color-fg) 6%, transparent),
+    0 1px 2px color-mix(in oklab, var(--color-fg) 5%, transparent),
+    0 10px 24px -16px color-mix(in oklab, var(--color-fg) 18%, transparent);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    background-image:
+      radial-gradient(color-mix(in oklab, var(--color-fg) 4%, transparent) 0.6px, transparent 0.6px);
+    background-size: 7px 7px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  img {
+    outline: 1px solid color-mix(in oklab, var(--color-fg) 10%, transparent);
+    outline-offset: -1px;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-primary) 22%, transparent);
+    color: var(--color-fg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
