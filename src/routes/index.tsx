@@ -23,11 +23,11 @@ function Home() {
   const showEmpty = !hasHydrated || cultures.length === 0;
 
   return (
-    <main className="px-5 pt-8 md:px-8 md:pt-10">
-      <header className="mb-8 md:mb-10">
+    <main className="px-5 pt-8 md:px-8">
+      <header className="mb-8">
         <p className="font-display text-sm italic text-muted">Diario de fermentos</p>
         <h1 className="mt-1 font-display text-4xl text-fg md:text-5xl">Cultivo</h1>
-        <p className="mt-2 max-w-sm text-sm text-muted md:max-w-xl md:text-base">
+        <p className="mt-2 max-w-sm text-sm text-muted md:max-w-xl">
           Una foto al recambio. El diario apunta el día de recolectar y cambiar el agua.
         </p>
       </header>
@@ -35,7 +35,7 @@ function Home() {
       {showEmpty ? (
         <EmptyState />
       ) : (
-        <div className="space-y-8 md:space-y-10">
+        <div className="space-y-8">
           {nextCulture && next ? (
             <section className="space-y-3">
               <div className="flex items-end justify-between">
@@ -51,9 +51,9 @@ function Home() {
               </Button>
             </section>
           ) : (
-            <section className="rounded-xl bg-surface p-5 shadow-card md:p-8">
-              <h2 className="font-display text-2xl md:text-3xl">Todo al día</h2>
-              <p className="mt-2 max-w-xl text-sm text-muted md:text-base">
+            <section className="rounded-xl bg-surface p-5 shadow-card md:p-6">
+              <h2 className="font-display text-2xl">Todo al día</h2>
+              <p className="mt-2 max-w-xl text-sm text-muted">
                 No hay un recambio pendiente. Cuando cambies el agua o la leche, haz la foto.
               </p>
               <Button asChild className="mt-4">
@@ -67,7 +67,7 @@ function Home() {
 
           {rest.length > 0 ? (
             <section className="space-y-3">
-              <h2 className="font-display text-2xl md:text-3xl">Otras jarras</h2>
+              <h2 className="font-display text-2xl">Otras jarras</h2>
               <div className="grid gap-3 md:grid-cols-2">
                 {rest.map((culture) => (
                   <CultureCard
@@ -83,7 +83,7 @@ function Home() {
 
           {recent.length > 0 ? (
             <section className="space-y-3 pb-6">
-              <h2 className="font-display text-2xl md:text-3xl">Registro</h2>
+              <h2 className="font-display text-2xl">Registro</h2>
               <ul className="grid gap-2 md:grid-cols-2">
                 {recent.map((batch) => {
                   const culture = cultures.find((c) => c.id === batch.cultureId);
@@ -132,8 +132,8 @@ function EmptyState() {
       <div className="mx-auto flex h-28 w-24 items-end justify-center">
         <JarMark type="kefir-agua" progress={0.62} className="h-28 w-20" />
       </div>
-      <h2 className="mt-5 font-display text-3xl md:text-4xl">Tu jarra te espera</h2>
-      <p className="mx-auto mt-3 max-w-sm text-sm text-muted md:max-w-md md:text-base">
+      <h2 className="mt-5 font-display text-3xl">Tu jarra te espera</h2>
+      <p className="mx-auto mt-3 max-w-sm text-sm text-muted md:max-w-md">
         Elige el fermento, haz una foto al recambio y Cultivo escribe el texto con el día de recolecta.
       </p>
       <Button asChild size="lg" className="mt-6">
