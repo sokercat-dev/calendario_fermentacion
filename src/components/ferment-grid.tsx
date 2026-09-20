@@ -9,7 +9,7 @@ type FermentGridProps = {
 
 export function FermentGrid({ value, onChange }: FermentGridProps) {
   return (
-    <div className="grid grid-cols-2 gap-3">
+    <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
       {FERMENT_IDS.map((id) => {
         const spec = FERMENTS[id];
         const selected = value === id;
@@ -19,7 +19,7 @@ export function FermentGrid({ value, onChange }: FermentGridProps) {
             type="button"
             onClick={() => onChange(id)}
             className={cn(
-              "flex flex-col items-start gap-3 rounded-xl bg-surface p-3 text-left shadow-card transition-[transform,box-shadow] duration-150 active:scale-[0.98]",
+              "flex flex-col items-start gap-3 rounded-xl bg-surface p-3 text-left shadow-card transition-[transform,box-shadow] duration-150 active:scale-[0.98] hover:-translate-y-0.5 hover:shadow-md",
               selected && "ring-2 ring-primary ring-offset-2 ring-offset-bg",
             )}
           >

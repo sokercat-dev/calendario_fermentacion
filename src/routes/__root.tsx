@@ -17,7 +17,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Diario de fermentos: foto del recambio, fecha de recolecta y aviso para cambiar el agua del kéfir, yogur o chucrut.",
+          "Diario de fermentos para PC y Android: foto del recambio, fecha de recolecta y aviso para cambiar el agua del kéfir, yogur o chucrut.",
       },
       { name: "theme-color", content: "#3d5a4c" },
     ],

@@ -6,19 +6,22 @@ export const Route = createFileRoute("/guia")({ component: Guia });
 
 function Guia() {
   return (
-    <main className="px-5 pt-8 pb-8">
+    <main className="px-5 pt-8 pb-8 md:px-8 md:pt-10">
       <p className="font-display text-sm italic text-muted">Tiempos de cosecha</p>
-      <h1 className="mt-1 font-display text-4xl">Guía de recambio</h1>
-      <p className="mt-3 max-w-sm text-sm text-muted">
+      <h1 className="mt-1 font-display text-4xl md:text-5xl">Guía de recambio</h1>
+      <p className="mt-3 max-w-sm text-sm text-muted md:max-w-2xl md:text-base">
         Las fechas que propone Cultivo salen de recetas y manuales de cultivo de nódulos, no de un
         temporizador genérico. El calor de tu cocina puede adelantar o retrasar un ciclo.
       </p>
 
-      <div className="mt-8 space-y-6">
+      <div className="mt-8 grid gap-6 md:grid-cols-2 md:gap-5">
         {FERMENT_IDS.map((id) => {
           const spec = FERMENTS[id];
           return (
-            <article key={id} className="rounded-xl bg-surface p-5 shadow-card">
+            <article
+              key={id}
+              className="rounded-xl bg-surface p-5 shadow-card transition-[transform,box-shadow] duration-150 hover:-translate-y-0.5 hover:shadow-md md:p-6"
+            >
               <div className="flex items-start gap-4">
                 <JarMark type={id} className="h-16 w-12 shrink-0" />
                 <div>

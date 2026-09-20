@@ -36,24 +36,24 @@ export function CultureCard({ culture, batch, now, featured }: CultureCardProps)
       to="/cultivo/$id"
       params={{ id: culture.id }}
       className={cn(
-        "block overflow-hidden rounded-xl bg-surface shadow-card transition-transform duration-150 active:scale-95",
+        "block overflow-hidden rounded-xl bg-surface shadow-card transition-[transform,box-shadow] duration-150 active:scale-95 hover:-translate-y-0.5 hover:shadow-md",
         featured && "min-h-72",
       )}
     >
       {featured && batch?.photo ? (
-        <div className="relative min-h-80">
+        <div className="relative min-h-80 md:min-h-96">
           <img
             src={batch.photo}
             alt={culture.name}
             className="absolute inset-0 size-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-fg/85 via-fg/25 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 p-5 text-bg">
+          <div className="absolute inset-x-0 bottom-0 p-5 text-bg md:p-6">
             <Badge variant={status === "overdue" ? "clay" : "primary"}>{statusLabel(status)}</Badge>
-            <h2 className="mt-3 font-display text-3xl tracking-tight">{culture.name}</h2>
+            <h2 className="mt-3 font-display text-3xl tracking-tight md:text-4xl">{culture.name}</h2>
             {harvest ? (
               <>
-                <p className="mt-2 font-display text-2xl tabular-nums">
+                <p className="mt-2 font-display text-2xl tabular-nums md:text-3xl">
                   {formatCountdown(harvest, now)}
                 </p>
                 <p className="mt-1 text-sm text-bg/80">
@@ -64,7 +64,7 @@ export function CultureCard({ culture, batch, now, featured }: CultureCardProps)
           </div>
         </div>
       ) : (
-        <div className={cn("flex gap-4 p-4", featured && "min-h-44 items-center p-5")}>
+        <div className={cn("flex gap-4 p-4", featured && "min-h-44 items-center p-5 md:p-6")}>
           {batch?.photo ? (
             <img
               src={batch.photo}
